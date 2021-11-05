@@ -43,10 +43,10 @@ public class Main {
                 if ((char) stack.peek() == '(') {
                     stack.pop();
                 }
-            } else if (arr[i] == '|' || arr[i] == '*' || arr[i] == '+' || arr[i] == '-' || arr[i] == '/' || arr[i] == '~') {
+            } else if (arr[i] == '|' || arr[i] == '*' || arr[i] == '+' || arr[i] == '-' || arr[i] == '/' || arr[i] == '~' || arr[i] == '>') {
                 operatorCounter++;
                 if (operatorCounter > 1) {
-                    new ArithmeticException("2 operators in a row");
+                    new ArithmeticException("2 operators in a row(|+-*/~)");
                 }
                 checkWordCounter();
             } else new ArithmeticException("wtf????");
